@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>LINGO</title>
+
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+		<!-- FACEBOOK -->
+		<meta property="og:title" content="Lingo" />
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://jennifervandermeer.ca/lingo/">
+		<meta property="og:image" content="http://jennifervandermeer.ca/lingo/images/lingo.png">
+		<meta property="og:description" content="A data visualization of popular slang words used in tweets from 5 major cities around the world!">
+
+		<!-- TWITTER -->
+		<meta name = "twitter:card" content = "summary">
+		<meta name = "twitter:title" content = "Lingo">
+		<meta name = "twitter:description" content="A data visualization of popular slang words used in tweets from 5 major cities around the world!">
+		<meta name="twitter:image" content="http://jennifervandermeer.ca/lingo/images/lingo.png/">
+
+		<!-- GOOGLE FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+
+		<!-- JQUERY -->
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+		<!-- EXTERNAL PLUGINS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+		<script src="js/jquery.simplesidebar.js"></script>
+
+		<!-- JS LINKS -->
+        <script src="js/d3.layout.cloud.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.waitforimages.js"></script>
+        
+
+        <!-- CSS -->
+		<link rel="stylesheet" href="css/main.css">
+
+	<head>
+	<body>
+
+		<div id="loading">
+			<div id="spinner">
+				<div class="loader"></div>
+			</div>
+			<div id = "loadingStuff">
+				<h1>Loading</h1>
+			</div>
+		</div>
+
+		<div class="wrapper">
+
+			<div class="toolbar">
+			  <div id="open-sb" class="menu-button menu-left"></div>
+			  <img id="quest" class="question" src="images/question.svg"/>
+			  <img id="exit" class="question" src="images/exit.svg"/>
+			  <div id="message">
+			  	<p> Hello and welcome to Lingo! This is a data visualization that represents the most common slang words that are used on twitter today. Lingo measures the use of slang words in 5 different English-speaking cities around the world. Click on the menu button on your left to see and select the cities.</p>
+			  </div>
+			</div>
+			
+
+			<section class="sidebar">
+				<nav>
+				  <h1>Lingo</h1>
+				  <ul>
+				    <a href="#" class="city" id="All"><li class="active"><img class="cityIcon" src="images/all.svg"> All </li></a>
+				    <a href="#" class="city" id="Toronto"><li><img class="cityIcon" src="images/toronto.svg">Toronto</li></a>
+				    <a href="#" class="city" id="Singapore"><li><img class="cityIcon" src="images/singapore.svg">Singapore</li></a>
+				    <a href="#" class="city" id="NYC"><li><img class="cityIcon" src="images/new-york.svg">New York</li></a>
+					<a href="#" class="city" id="Sydney"><li><img class="cityIcon" src="images/sydney.svg">Sydney</li></a>
+					<a href="#" class="city" id="London"><li><img class="cityIcon" src="images/london.svg">London</li></a>
+				  </ul>
+				  
+				  	<input type="text" maxlength="30" name="slang" placeholder="Add Slang Word" class="slang" pattern="([a-zA-Z0-9?\s+]){1,40}"><input type="submit" value='+' class="plus">
+
+				</nav>
+			</section>
+
+			<div id="vis"></div>
+
+		</div>
+
+		<script src="js/loadAndSidebar.js"></script>
+
+	</body>
+	
+</html>

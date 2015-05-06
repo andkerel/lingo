@@ -1,0 +1,404 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+
+COLORSSSSS
+
+purple #681379
+blue #69A3CF 
+green #B7CB3D
+
+*/
+
+/* -------------------- LOADING!!! ----------------------*/
+
+#loading {
+	background-color:#69A3CF;
+	height: 100vh;
+	z-index: 4000;
+	position: absolute;
+	width: 100%;
+	top:0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#loadingStuff {
+	position: relative;
+	margin-top: 50vh;
+}
+
+
+/*----------------------------- SPINNER --------------------*/
+
+#spinner {
+	position: absolute;
+	margin-top: 35vh;
+	width: 100%;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #FFF;
+  -webkit-animation: load1 0.7s infinite ease-in-out;
+  animation: load1 0.7s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader {
+  text-indent: -9999em;
+  margin: 8em auto;
+  font-size: 11px;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.17s;
+
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #FFF;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #FFF;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
+}
+
+
+/*----------------------------- CONTENT --------------------*/
+
+html {
+	overflow: hidden;
+}
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #EFEFEF;
+}
+
+h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 4em;
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 3em;
+}
+
+p{
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1.2em;
+}
+
+#vis {
+	z-index: 1;
+}
+
+
+/*----------------------------- NEW SIDEBAR --------------------*/
+
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  line-height: 68px;
+}
+
+.question {
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: 3%;
+	cursor: pointer;
+	-webkit-transition: all 0.5s ease;
+  	-moz-transition: all 0.5s ease;
+  	-o-transition: all 0.5s ease;
+  	transition: all 0.5s ease;
+}
+
+#exit {
+	display: none;
+}
+
+
+
+#message {
+	display: none;
+	background-color:#69A3CF; 
+	width: 25%;
+	padding:3%;
+	margin-left: 3%;
+}
+
+.menu-button {
+  position: relative;
+  margin: 3%;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+}
+
+.menu-button:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  border-bottom: 17px double #69A3CF;
+  border-top: 6px solid #69A3CF;
+  width: 30px;
+  height: 5px;
+}
+
+.menu-left {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.sidebar {
+  margin: 0;
+  padding-top: 1em;
+  color: white;
+  background-color: #69A3CF;
+}
+
+.sidebar h6 {
+  margin: 0 .8em;
+  padding: 0;
+  font-weight: 300;
+}
+
+.sidebar ul {
+	margin-top: 2em;
+}
+
+li {
+	padding: 5%;
+	list-style-type: none;
+	text-decoration: none;
+	color: #3E6CAE;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	vertical-align: middle;
+	-webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
+}
+
+li:hover { 
+	background-color: #3E6CAE; 
+	color: white;
+}
+
+
+.sidebar a {
+	text-decoration: none;
+	-webkit-transition: all 0.5s;
+  	-moz-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  	transition: all 0.5s;
+}
+
+.cityIcon {
+	width: 40px;
+	color: white;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+nav {
+	margin-top: 20px;
+}
+
+.active {
+	background-color: #3E6CAE; 
+	color: white;
+}
+
+/*----------------------------- INPUT FORM --------------------*/
+
+form {
+	width: 100%;
+}
+
+.slang {
+	border: none;
+	outline:none;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 1.5em;
+	color:#3E6CAE;
+	vertical-align: middle;
+	display: inline-block;
+	width: 70%;
+	padding:5%;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.slang::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+.slang:-moz-placeholder {
+	color: #aaa;
+}
+
+.slang::-moz-placeholder {
+	color: #aaa;
+}
+
+.slang:-ms-input-placeholder {
+	color: #aaa;
+}
+
+.plus {
+	border: none;
+	outline:none;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	font-size: 1.5em;
+	cursor: pointer;
+	color: white;
+	background-color:#69A3CF; 
+	margin: 0;
+	vertical-align: middle;
+	display: inline-block;
+	width: 20%;
+	padding-top:5%;
+	padding-bottom: 5%;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.plus:hover {
+	background-color: #3E6CAE;
+}
+
+.sChange {
+	width:0%;
+	padding-left:0%;
+	padding-right:0%;
+}
+
+.pChange{
+	width:100%;
+}
+
+/*--------------------------MEDIA QUERIES --------------------*/
+
+@media screen and (max-width: 800px) {
+    #message {
+  		width:55%;
+  		padding:5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    #message {
+  	width:84%;
+  }
+}
